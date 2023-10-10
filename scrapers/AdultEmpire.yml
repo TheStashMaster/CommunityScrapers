@@ -12,6 +12,18 @@ sceneByURL:
       - adultdvdempire.com
       - adultempire.com
     scraper: sceneScraper
+    
+performerByName:
+  action: scrapeXPath
+  queryURL: https://www.adultempire.com/performer/search?q={}
+  scraper: performerSearch
+
+performerByURL:
+  - action: scrapeXPath
+    url: 
+      - adultempire.com
+    scraper: performerScraper  
+
 sceneByName:
   action: scrapeXPath
   # if needed replace `dvd` with `vod`
@@ -22,8 +34,25 @@ sceneByQueryFragment:
   queryURL: "{url}"
   scraper: sceneScraper
 
-
 xPathScrapers:
+  performerSearch:
+    common:
+      $perfomerRoot: //div[@id="performerlist"]//a
+    performer:
+      Name: $perfomerRoot/@label
+      URL: 
+        selector: $perfomerRoot/@href
+        postProcess:
+          - replace:
+            - regex: ^
+              with: https://www.adultempire.com
+  performerScraper:
+    common:
+      $performerRoot: //section[@class="container-fluid"]
+    performer:
+      #Name: $performerRoot//h1/text()
+      Image: $performerRoot//a[@class="fancy"][@label="Headshot"]/@href
+
   sceneSearch:
     scene:
       Title:
@@ -60,7 +89,7 @@ xPathScrapers:
         postProcess:
           - parseDate: Jan 02 2006
       Synopsis:
-        selector: //div[contains(@class,"synopsis-content")]//text()
+        selector: //h4[contains(@class,"synopsis")]//text()
         concat: " "
       Studio:
         Name: //a[@label="Studio"]/text()
@@ -78,13 +107,12 @@ xPathScrapers:
     scene:
       Title: //h1/text()
       Details:
-        selector: //div[contains(@class,"synopsis-content")]//text()
+        selector: //h4[contains(@class,"synopsis")]//text()
         concat: " "
       Date:
         selector: //small[contains(text(), "Released")]/following-sibling::text()
         postProcess:
           - parseDate: Jan 02 2006
-      Director: //a[@label="Director"]/text()    
       Image: //a[@id="front-cover"]/@data-href
       Studio:
         Name: //a[@label="Studio"]/text()
@@ -102,4 +130,4 @@ xPathScrapers:
                 - regex: ^
                   with: "https://www.adultdvdempire.com"
       URL: //meta[@name='og:url']/@content
-# Last Updated October 09, 2023
+# Last Updated January 26, 2023

@@ -5,6 +5,10 @@ sceneByURL:
     url:
       - clips4sale.com/studio/
     scraper: c4sSceneScraper
+  - action: scrapeXPath
+    url:
+      - clips4sale.com/search/clip/
+    scraper: c4sClipsSceneScraper
 
 sceneByName:
   action: scrapeXPath
@@ -97,6 +101,33 @@ xPathScrapers:
                 - regex: ^
                   with: "https:"
       URL: //meta[@property="og:url"]/@content
+
+  c4sClipsSceneScraper:
+    scene:
+      Title:
+        selector: //div[@class="clip-info__title"]/h3/text()
+        postProcess: *ppStripTitle
+      Details:
+        selector: //div[@class="modal_clip_description"]//p
+        concat: "\n\n"
+        postProcess: *ppStripDescription
+      Studio:
+        Name: //span[contains(text(),"From:")]/following-sibling::a[2]/text()
+        URL:
+          selector: //span[contains(text(),"From:")]/following-sibling::a[2]/@href
+          postProcess: *ppPrependOrigin
+      Date:
+        selector: //strong[contains(text(),"Added:")]/following-sibling::span[contains(@class,"hidden-lg")]/text()
+        postProcess: *ppParseDate
+      Image:
+        selector: //button[@id="single-add-to-cart-0"]/@data-src
+        postProcess: *ppPrependScheme
+      Tags:
+        Name: //span[contains(text(),"Related Categories:")]/following-sibling::a|//span[contains(text(),"Keywords:")]/following-sibling::a
+      Performers:
+        # Clips4Sale doesn't have an explict performer field, but performers are
+        # often included in the video tags. So we attempt to find matches there.
+        Name: //span[contains(text(),"Keywords:")]/following-sibling::a
 
 driver:
   cookies:

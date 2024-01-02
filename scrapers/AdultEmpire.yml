@@ -34,13 +34,13 @@ sceneByQueryFragment:
   action: scrapeXPath
   queryURL: "{url}"
   scraper: sceneScraper
-performerByURL:
-  - 
-    action: scrapeXPath
-    url:
-       - adultdvdempire.com
-       - adultempire.com
-    scraper: performerScraper
+#performerByURL:
+#  - 
+#    action: scrapeXPath
+#    url:
+#       - adultdvdempire.com
+#       - adultempire.com
+#    scraper: performerScraper
 
 xPathScrapers:
   performerSearch:
@@ -54,12 +54,12 @@ xPathScrapers:
           - replace:
             - regex: ^
               with: https://www.adultempire.com
-  performerScraper:
-    common:
-      $performerRoot: //section[@class="container-fluid"]
-    performer:
-      #Name: $performerRoot//h1/text()
-      Image: $performerRoot//a[@class="fancy"][@label="Headshot"]/@href
+#  performerScraper:
+#    common:
+#      $performerRoot: //section[@class="container-fluid"]
+#    performer:
+#      #Name: $performerRoot//h1/text()
+#      Image: $performerRoot//a[@class="fancy"][@label="Headshot"]/@href
 
   sceneSearch:
     scene:
@@ -156,7 +156,8 @@ xPathScrapers:
               - regex: Height:\s+(.*)
                 with: $1
           - feetToCm: true
-      Image: //*[@id="content"]/section/div/div[1]/a[1]|/img/@src|//*[@id="content"]/section/div/div[1]/img/@src
+#      Image: //*[@id="content"]/section/div/div[1]/a[1]|/img/@src|//*[@id="content"]/section/div/div[1]/img/@src
+      Image: //*[@id="content"]/section/div/div[1]/a[1]|/img/@src|//*[@id="content"]/section/div/div[1]/img/@src|//section[@class="container-fluid"]//a[@class="fancy"][@label="Headshot"]/@href
       Country:
         selector: $infoPiecel/li[contains(text(), 'From:')]/text()
         postProcess:

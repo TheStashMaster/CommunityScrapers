@@ -106,7 +106,7 @@ xPathScrapers:
       Details:
         selector: //div[@class="modal_clip_description"]//p
         concat: "\n\n"
-        postProcess: *ppStripDescription
+#        postProcess: *ppStripDescription
       Studio:
         Name: //span[contains(text(),"From:")]/following-sibling::a[2]/text()
         URL:
@@ -117,7 +117,7 @@ xPathScrapers:
         postProcess: *ppParseDate
       Image:
         selector: //button[@id="single-add-to-cart-0"]/@data-src
-        postProcess: *ppPrependScheme
+#        postProcess: *ppPrependScheme
       Tags:
         Name: //span[contains(text(),"Related Categories:")]/following-sibling::a|//span[contains(text(),"Keywords:")]/following-sibling::a
       Performers:

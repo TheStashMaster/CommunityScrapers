@@ -54,6 +54,8 @@ xPathScrapers:
           - replace:
             - regex: ^
               with: https://www.adultempire.com
+      Image: $performerRoot//a[@class="fancy"][@label="Headshot"]/@href
+
 #  performerScraper:
 #    common:
 #      $performerRoot: //section[@class="container-fluid"]

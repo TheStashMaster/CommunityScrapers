@@ -5,6 +5,10 @@ name: Pornworld
 sceneByURL:
   - action: scrapeXPath
     url:
+      - tour10.pornworld.com/watch/
+    scraper: tour10SceneScraper
+  - action: scrapeXPath
+    url:
       - pornworld.com/watch/
     scraper: sceneScraper
 
@@ -26,12 +30,13 @@ jsonScrapers:
 xPathScrapers:
   sceneScraper:
     scene:
-      Title:
-        selector: //h1
+      Title: &title
+        selector: //h1/text()
         postProcess:
           - replace:
               - regex: featuring.+
                 with: ""
+<<<<<<< HEAD
 #      Code:
 #        selector: //h1
 #        postProcess:
@@ -40,6 +45,10 @@ xPathScrapers:
 #                with: $1
       Date:
         selector: //strong/following-sibling::span
+=======
+      Code:
+        selector: //h1/text()
+>>>>>>> master
         postProcess:
           - parseDate: 2006, January 02
       Details: //span[text()="Description:"]/..
@@ -50,6 +59,26 @@ xPathScrapers:
       Studio:
         Name:
           fixed: Porn World
+<<<<<<< HEAD
+=======
+      Image: //video/@data-poster
+      URL: //div[@class="pagination"]/a[1]/@href
+  tour10SceneScraper:
+    scene:
+      Title: *title
+      Date:
+        selector: //strong/following-sibling::span
+        postProcess:
+          - parseDate: 2006, January 2
+      Details: //span[text()="Description:"]/..
+      Tags:
+        Name: //span[text()="Tags:"]/../a/text()
+      Performers:
+        Name: //a[contains(@href, '/model/')]
+      Studio:
+        Name:
+          fixed: Porn World
+>>>>>>> master
       Image: //video/@poster
       URL:
         selector: //head/link[@rel="canonical"]/@href
@@ -57,4 +86,8 @@ xPathScrapers:
           - replace:
               - regex: (.*)
                 with: https://tour10.pornworld.com$1
+<<<<<<< HEAD
 # Last Updated January 03, 2024
+=======
+# Last Updated January 04, 2024
+>>>>>>> master

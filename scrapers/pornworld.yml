@@ -36,31 +36,26 @@ xPathScrapers:
           - replace:
               - regex: featuring.+
                 with: ""
-<<<<<<< HEAD
-#      Code:
-#        selector: //h1
-#        postProcess:
-#          - replace:
-#              - regex: .*(GP\d+).*
-#                with: $1
-      Date:
-        selector: //strong/following-sibling::span
-=======
       Code:
         selector: //h1/text()
->>>>>>> master
         postProcess:
-          - parseDate: 2006, January 02
-      Details: //span[text()="Description:"]/..
+          - replace:
+              - regex: .*(GP\d+).*
+                with: $1
+      Date: //i[contains(@class,"calendar3")]/text()
+      Details:
+        selector: //meta[@name="description"]/@content
+        postProcess:
+          - replace:
+              - regex: '\x{0092}' # unicode char 0092 (looks like ')
+                with: "'"
       Tags:
-        Name: //span[text()="Tags:"]/../a/text()
+        Name: //div[@class="watch"]//a[contains(@href,"genre")]/text()
       Performers:
-        Name: //a[contains(@href, '/model/')]
+        Name: //div[@class="watch"]//a[contains(@href,"model")]/text()
       Studio:
         Name:
           fixed: Porn World
-<<<<<<< HEAD
-=======
       Image: //video/@data-poster
       URL: //div[@class="pagination"]/a[1]/@href
   tour10SceneScraper:
@@ -78,7 +73,6 @@ xPathScrapers:
       Studio:
         Name:
           fixed: Porn World
->>>>>>> master
       Image: //video/@poster
       URL:
         selector: //head/link[@rel="canonical"]/@href
@@ -86,8 +80,4 @@ xPathScrapers:
           - replace:
               - regex: (.*)
                 with: https://tour10.pornworld.com$1
-<<<<<<< HEAD
-# Last Updated January 03, 2024
-=======
 # Last Updated January 04, 2024
->>>>>>> master

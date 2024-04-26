@@ -1,13 +1,13 @@
-name: Kink
+name: TwistedFactory 
 sceneByURL:
   - action: scrapeXPath
     url:
-      - kink.com
+      - twistedfactory.com
     scraper: sceneScraper
 
 sceneByFragment:
   action: scrapeXPath
-  queryURL: https://www.kink.com/shoot/{filename}
+  queryURL: https://www.twistedfactory.com/shoot/{filename}
   # constructs the scene URL from the filename, provided that the filename includes the scene id
   queryURLReplace:
     filename:
@@ -17,14 +17,16 @@ sceneByFragment:
       - regex: .*\((\d+)\)\.[a-zA-Z\d]+$ #support filenames in the form scene - date - performer (12345).mp4
         with: $1
   scraper: sceneScraper
+
 performerByName:
   action: scrapeXPath
-  queryURL: https://www.kink.com/search?type=performers&q={}
+  queryURL: https://www.twistedfactory.com/search?type=performers&q={}
   scraper: performerSearch
+
 performerByURL:
   - action: scrapeXPath
     url:
-      - kink.com/model
+      - twistedfactory.com/model
     scraper: performerScraper
 
 xPathScrapers:
@@ -46,119 +48,14 @@ xPathScrapers:
           - parseDate: 2006-01-02
       Director: //span[contains(@class, "director-name")]
       Studio:
-        Name:
-          selector: //a[contains(@href, "/channel/") and contains(@class, "text-uppercase")]/@href
-          postProcess:
-            - replace:
-                - regex: /channel/
-                  with: ""
-            - map:
-                # List of sites as of 2024-01-04 from https://www.kink.com/channels
-                # [...new Set([...document.querySelectorAll('h3 > a')]
-                #   .map(a => a.href.split("/").pop() + ": " + a.innerText))]
-                #   .toSorted()
-                #   .join("\n")
-                analized: Analized
-                animated-kink: Animated Kink
-                ashley-fires-scifi-dreamgirls: Ashley Fires SciFi Dreamgirls
-                aziani-iron: Aziani Iron
-                badfam-pov: Bad Family POV
-                ball-gaggers: Ball Gaggers
-                banana-jacks: Banana Jacks
-                bifuck: BiFUCK
-                bizarre-video-transsexual: Bizarre Video Transsexual
-                bizarre-video: Bizarre Video
-                bleu-films: Bleu Films
-                bondage-liberation: Bondage Liberation
-                bound-gang-bangs: Bound Gang Bangs
-                bound-men-wanked: Bound Men Wanked
-                brutal-sessions: Brutal Sessions
-                carmen-rivera: Carmen Rivera
-                cfnmeu: CFNMEU
-                ddf-network: DDF Network
-                deviant-hardcore: Deviant Hardcore
-                device-bondage: Device Bondage
-                digital-sin: Digital Sin
-                divine-bitches: Divine Bitches
-                dungeon-sex: Dungeon Sex
-                electrosluts: Electrosluts
-                everything-butt: Everything Butt
-                evolved-fights-lesbian-edition: Evolved Fights Lesbian Edition
-                evolved-fights: Evolved Fights
-                families-tied: Families Tied
-                fembot-academy: Fembot Academy
-                femdum: FemDum
-                femme-fatale-films: Femme Fatale Films
-                fetishnetwork: FetishNetwork
-                filth-syndicate: Filth Syndicate
-                filthy-femdom: Filthy Femdom
-                foot-worship: Foot Worship
-                fucking-machines: Fucking Machines
-                gangbang-chief: Gangbang Chief
-                gloryhole-secrets: Gloryhole Secrets
-                hardcore-gangbang: Hardcore Gangbang
-                hardcore-punishments: Hardcore Punishments
-                harmony-fetish: Harmony Fetish
-                hogtied-up: Hogtied Up
-                hogtied: Hogtied
-                hot-legs-and-feet: Hot Legs & Feet
-                house-of-taboo: House Of Taboo
-                kink-classics: Kink Classics
-                kink-features: Kink Features
-                kink-test-shoots: Kink Test Shoots
-                kink-university: Kink University
-                kinklive: KinkLive
-                kinky-bites: Kinky Bites
-                lakeview-entertainment: Lakeview Entertainment
-                machine-dom: Machine Dom
-                mean-bitch: Mean Bitch
-                medical-y-sado: Medical Y Sado
-                men-in-pain: Men In Pain
-                pascals-sub-sluts: Pascals Sub Sluts
-                pegging: Pegging
-                peghim: PegHim
-                plumperd: Plumperd
-                pornforce: Porn Force
-                pornstar-platinum: Pornstar Platinum
-                pov-pickups: POV Pickups
-                public-disgrace: Public Disgrace
-                revenge-of-the-baroness: Revenge Of The Baroness
-                royal-fetish-films: Royal Fetish Films
-                savage-gangbang: Savage Gangbang
-                severe-sex-films: Severe Sex Films
-                sex-and-submission: Sex And Submission
-                sexual-disgrace: Sexual Disgrace
-                sister-wives: Sister Wives
-                slutinspection: Slut Inspection
-                spizoo: Spizoo
-                strapon-squad: Strapon Squad
-                struggling-babes: Struggling Babes
-                submissive-x: Submissive X
-                submissived: Submissived
-                sweet-femdom: Sweet FemDom
-                the-training-of-o: The Training Of O
-                the-upper-floor: The Upper Floor
-                the-venus-girls: The Venus Girls
-                torment-time: Torment Time
-                transerotica: TransErotica
-                ts-pussy-hunters: TS Pussy Hunters
-                ts-seduction: TS Seduction
-                twisted-visual: Twisted Visual
-                ultimate-surrender: Ultimate Surrender
-                wasteland: Wasteland
-                water-bondage: Water Bondage
-                whipped-ass: Whipped Ass
-                wired-pussy: Wired Pussy
+        Name: //div[contains(@class,'shoot-detail-legend')]//a 
       Performers:
         Name:
-          selector: //div[@data-setup]/@data-setup
+          selector: //h1/following-sibling::*/a[contains(@href, "/model/")]
           postProcess:
             - replace:
-                - regex: ^.*"modelNames":\[([^]]+).*$
-                  with: $1
-                - regex: \"
+                - regex: \,
                   with: ""
-          split: ","
       Tags:
         Name:
           selector: //h4[contains(text(), "Categories")]/following-sibling::*/a
@@ -175,11 +72,16 @@ xPathScrapers:
           - replace:
               - regex: ^.*"posterUrl":"([^"]+).*$
                 with: $1
-              - regex: "\\?.*$"
+              - regex: "?.*$"
                 with: ""
-      # Pages do not include canonical URL links as of 2024
-      # but I'm leaving this in case they change that back
-      URL: //link[@rel="canonical"]/@href
+      URL: 
+        selector: //script[contains(.,'KinkyTracking.all')] | //div[@id='shootPage']/@data-shootid
+        concat: '__SEP__'
+        postProcess:
+          - replace:
+              - regex: ^.+?multiSite:'([^']+).+?__SEP__(.+)
+                with: https://$1/shoot/$2
+
   performerSearch:
     common:
       $result: //div/a[contains(@href, "/model") and contains(concat(" ", normalize-space(@class), " "), " model-link ")]
@@ -190,7 +92,7 @@ xPathScrapers:
         postProcess:
           - replace:
               - regex: ^
-                with: https://www.kink.com
+                with: https://www.twistedfactory.com
 
   performerScraper:
     performer:
@@ -288,9 +190,8 @@ xPathScrapers:
           - replace:
               - regex: ^.+?multiSite:'([^']+).+?__SEP__(.+)
                 with: https://$1/model/$2
-
 driver:
   headers:
     - Key: User-Agent
       Value: stash-scraper/1.0.0
-# Last Updated April 22, 2024
+# Last Updated April 19, 2024

@@ -180,7 +180,7 @@ xPathScrapers:
               - regex: Height:\s+(.*)
                 with: $1
           - feetToCm: true
-      Image: //*[@id="content"]/section/div/div[1]/a[1]|/img/@src|//*[@id="content"]/section/div/div[1]/img/@src|//section[@class="container-fluid"]//a[@class="fancy"][@label="Headshot"]/@href
+      Image: //a[contains(concat(' ',normalize-space(@class),' '),' fancy ')][@label="Headshot"]/@href
       Country:
         selector: $infoPiecel/li[contains(text(), 'From:')]/text()
         postProcess:

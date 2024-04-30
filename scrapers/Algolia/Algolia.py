@@ -62,6 +62,7 @@ MOVIE_SITES = {
     "devilstgirls": "https://www.devilstgirls.com/en/dvd",
     "diabolic": "https://www.diabolic.com/en/movie",
     "falconstudios": "https://www.falconstudios.com/en/movie",
+    "ragingstallion": "https://www.ragingstallion.com/en/movie",    
     "evilangel": "https://www.evilangel.com/en/movie",
     "genderx": "https://www.genderxfilms.com/en/movie",
     "girlfriendsfilms": "https://www.girlfriendsfilms.com/en/movie",
@@ -73,6 +74,7 @@ MOVIE_SITES = {
     "wicked": "https://www.wicked.com/en/movie",
     "zerotolerancefilms": "https://www.zerotolerancefilms.com/en/movie",
     "3rddegreefilms": "https://www.3rddegreefilms.com/en/movie",
+    "lethalhardcore": "https://www.lethalhardcore.com/en/movies",
     "roccosiffredi": "https://www.roccosiffredi.com/en/dvd",
 }
 
@@ -103,6 +105,8 @@ SITES_USING_OVERRIDE_AS_STUDIO_FOR_SCENE = {
     "Devils Gangbangs": "Devil's Gangbangs",
     "Devilstgirls": "Devil's Tgirls",
     "Dpfanatics": "DP Fanatics",
+    "FalconStudios.com": "Falcon Studios",
+    "RagingStallion.com": "Raging Stallion",    
     "Janedoe": "Jane Doe Pictures",
     "ModernDaySins": "Modern-Day Sins",
     "Transgressivexxx": "TransgressiveXXX",
@@ -122,6 +126,8 @@ SITES_USING_SITENAME_AS_STUDIO_FOR_SCENE = [
     "ChaosMen",
     "Devil's Film",
     "Evil Angel",
+    "FalconStudios.com",
+    "RagingStallion.com",    
     "GenderXFilms",
     "Give Me Teens",
     "Hairy Undies",
@@ -131,6 +137,7 @@ SITES_USING_SITENAME_AS_STUDIO_FOR_SCENE = [
     "Rocco Siffredi",
     "Squirtalicious",
     "3rd Degree Films",
+    "Lethalhardcore",
 ]
 
 # a list of sites (`sitename_pretty` from the API) which should pick out the

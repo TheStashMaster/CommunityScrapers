@@ -247,6 +247,7 @@ berryboys.fr|PornsiteManager.yml|:heavy_check_mark:|:x:|:heavy_check_mark:|:x:|-
 bestoftealconrad.com|VNAGirls.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 bffs.com|PaperStreetMedia.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 biempire.com|MileHighMedia_BiandTrans/MileHighMedia_BiandTrans.yml|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Python|-
+bigasstease.com|BigAssTease.yml|:heavy_check_mark:|:x:|:x:|:heavy_check_mark:|-|-
 bigboobiesclub.com|Andomark.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 bigbootytgirls.com|BigBootyTGirls.yml|:heavy_check_mark:|:x:|:x:|:x:|-|Trans
 bigbouncybabes.com|Andomark.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
@@ -270,6 +271,7 @@ blackcockpassion.com|MVG.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 blacked.com|vixenNetwork.yml|:heavy_check_mark:|:x:|:x:|:x:|Python|-
 blackedraw.com|vixenNetwork.yml|:heavy_check_mark:|:x:|:x:|:x:|Python|-
 blackfoxbound.net|Shopmaker.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
+blackgirlfetish.com|BlackGirlFetish.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 blackgodz.com|PaperStreetMedia.yml|:heavy_check_mark:|:x:|:x:|:x:|-|Gay
 blackmaleme.com|BlackMaleMe.yml|:heavy_check_mark:|:x:|:x:|:x:|Python|Gay
 blackmarketxxx.com|CombatZone.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
@@ -1118,6 +1120,7 @@ kinkvr.com|BaDoink.yml|:heavy_check_mark:|:x:|:heavy_check_mark:|:heavy_check_ma
 kinkyfamily.com|kinkyfamily.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 kinkyfloridaamateurs.com|Shopmaker.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 kinkymistresses.com|KinkyMistresses.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
+kinkyrubberworld.com|ModelCentroAPI.yml|:heavy_check_mark:|:x:|:x:|:x:|Python|-
 kinkyspa.com|MetroHD/MetroHD.yml|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|Python|-
 kinkystyle.net|Shopmaker.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 kinkytwink.com|PornsiteManager.yml|:heavy_check_mark:|:x:|:heavy_check_mark:|:x:|-|Gay

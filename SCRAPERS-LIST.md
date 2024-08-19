@@ -1394,6 +1394,7 @@ milfvr.com|POVR.yml|:heavy_check_mark:|:x:|:x:|:x:|-|VR
 militarydick.com|PaperStreetMedia.yml|:heavy_check_mark:|:x:|:x:|:x:|-|Gay
 milkingtable.com|Adultime.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 milovana.com|Milovana.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
+mindcontroltheatre.com|MindControlTheatre.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 minimuff.com|ChickPass.yml|:heavy_check_mark:|:x:|:x:|:heavy_check_mark:|-|-
 minnano-av.com|Minnano-AV.yml|:x:|:x:|:x:|:heavy_check_mark:|-|-
 minuitsasori.com|Shopmaker.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
@@ -2141,6 +2142,7 @@ theamofficial.com|ModelCentroAPI.yml|:heavy_check_mark:|:x:|:x:|:x:|Python|-
 theartporn.com|Wtfpass.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 theassfactory.com|JulesJordan.yml|:heavy_check_mark:|:heavy_check_mark:|:x:|:x:|-|-
 theaudreyhollander.com|ModelCentroAPI.yml|:heavy_check_mark:|:x:|:x:|:x:|Python|-
+thebattleforearth.com|TheBattleForEarth.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 thebondagechallenge.com|Shopmaker.yml|:heavy_check_mark:|:x:|:x:|:x:|-|-
 thebronetwork.com|TheBroNetwork.yml|:heavy_check_mark:|:x:|:x:|:x:|-|Gay
 theclassicporn.com|theclassicporn.yml|:heavy_check_mark:|:x:|:heavy_check_mark:|:heavy_check_mark:|-|-

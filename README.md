@@ -35,7 +35,7 @@ Scrapers with **useCDP** set to true require that you have properly configured t
 
 ## Python scrapers
 
-Some scrapers require external programs to function, usually [Python](https://www.python.org/). All scrapers are tested with the newest stable release of Python, currently 3.12.2.
+Some scrapers require external programs to function, usually [Python](https://www.python.org/). All scrapers are tested with the newest stable release of Python, currently 3.13.x
 
 Depending on your operating system you may need to install both Python and the scrapers' dependencies before they will work. For Windows users we strongly recommend installing Python using the [installers from python.org](https://www.python.org/downloads/) instead of through the Windows Store, and also installing it outside of the Users folder so it is accessible to the entire system: a commonly used option is `C:\Python312`.
 
@@ -95,5 +95,5 @@ Specific scrapers can be checked using: `node validate.js scrapers/foo.yml scrap
 Instead of NodeJS being installed, Docker can be used to run the validator
 
 ```bash
-docker run --rm -v .:/app node:alpine /bin/sh -c "cd /app/validator && yarn install --silent && cd .. && node validate.js --ci""
+docker run --rm -v .:/app node:alpine /bin/sh -c "cd /app/validator && yarn install --silent && cd .. && node validate.js --ci"
 ```

@@ -27,13 +27,28 @@ xPathScrapers:
         Name: //div[@class="modelFeaturing"]//a
         URL: //div[@class="modelFeaturing"]//a/@href
       Details:
-        selector: //div[@class="description"]/p
+        selector: //div[@class="description"]/p//text() | //div[@class="description"]/p//br
         concat: "\n\n"
+        postProcess:
+          - replace:
+              - regex: <br\s*\/?> 
+                with: "\n"
       Image:
         selector: //img[@height="815"]/@src0_1x
       Studio:
         Name:
           fixed: Corbin Fisher
+      Tags:
+        Name:
+          selector: //head/link[@rel="canonical"]/@href
+          postProcess:
+            - replace:
+              - regex: .*-(remastered|REMASTERED)\..*
+                with: "Remaster,Re-Release"
+            - replace:
+              - regex: ^http.*
+                with: ""
+          split: ","
 
   performerScraper:
     performer:

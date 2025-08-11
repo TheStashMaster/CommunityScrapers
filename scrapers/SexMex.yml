@@ -3,7 +3,9 @@ name: SexMex
 sceneByURL: &byUrl
   - action: scrapeXPath
     url:
-      - sexmex.xxx
+      - exposedlatinas.com/tour/updates
+      - sexmex.xxx/tour/updates
+      - transqueens.com/tour/updates
     scraper: sexmex
 sceneByName:
   action: scrapeXPath
@@ -57,22 +59,6 @@ xPathScrapers:
                 with: "https://sexmex.xxx/tour/search.php?query="
           - subScraper:
               selector: //div[@data-setid][1]/@data-setid
-      # This uses the site search to find the scene so it
-      # will sometimes produce false positives
-      Date: &date
-        selector: *titleSel
-        postProcess:
-          - replace:
-              - regex: \s+
-                with: "+"
-              - regex: "&"
-                with: "%26"
-              - regex: ^
-                with: "https://sexmex.xxx/tour/search.php?query="
-          - subScraper:
-              selector: //p[contains(@class, "scene-date")][1]
-              postProcess:
-                - parseDate: 01/02/2006
       Details: &details //div[@class="panel-body"]/p[not(@class)]
       Tags: &tags
         Name:
@@ -82,7 +68,12 @@ xPathScrapers:
         Name: //div[@class="panel-body"]/p[@class="cptn-model"]/a//text()
       Studio: &studio
         Name:
-          fixed: Sex Mex
+          selector: //base/@href
+          postProcess:
+            - map:
+                https://exposedlatinas.com/tour/: Exposed Latinas
+                https://sexmex.xxx/tour/: Sex Mex
+                https://transqueens.com/tour/: Trans Queens
       Image:
         selector: //video/@poster
         postProcess:
@@ -93,7 +84,6 @@ xPathScrapers:
     gallery:
       Title: *title
       Code: *code
-      Date: *date
       Details: *details
       Tags: *tags
       Performers: *performers

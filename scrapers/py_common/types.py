@@ -99,6 +99,7 @@ class ScrapedMovie(TypedDict, total=False):
     back_image: str
     url: str
     aliases: str
+    tags: list[ScrapedTag]
 
 
 class ScrapedGallery(TypedDict, total=False):
@@ -128,6 +129,19 @@ class ScrapedScene(TypedDict, total=False):
     performers: list[ScrapedPerformer]
     code: str
     director: str
+
+
+class ScrapedImage(TypedDict, total=False):
+    title: str
+    details: str
+    urls: list[str]
+    date: str
+    studio: ScrapedStudio
+    galleries: list[ScrapedGallery]
+    performers: list[ScrapedPerformer]
+    tags: list[ScrapedTag]
+    code: str
+    photographer: str
 
 
 # Technically we can return a full ScrapedPerformer but the current UI only

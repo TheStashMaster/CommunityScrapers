@@ -64,6 +64,7 @@ studioMap = {
     "amberlilyshow":"Amber Lily Show",
     "amberspanks":"Amber Spanks",
     "americankitten":"American Kitten",
+    "amirahadaraxxx":"Amirah Adara XXX",
     "anastasiagree":"Anastasia Gree",
     "anisyia.xxx":"Anisyia XXX",
     "arabellesplayground": "Arabelle's Playground",
@@ -132,9 +133,11 @@ studioMap = {
     "natashanice":"Natasha Nice",
     "naughty-lada": "Naughty Lada",
     "niarossxxx":"Nia Ross XXX",
+    "nikkojordan":"Nikko Jordan",
     "niksindian":"Niks Indian",
     "officialelizabethmarxs":"ElizabethMarxs",
     "onedomproductions":"One Dom Productions",
+    "openlegsxxx": "Open Legs",
     "peccatriciproduzioni":"Pecca Trici Produzioni",
     "peghim":"Peg Him",
     "platinumpuzzy.net":"Platinum Puzzy",
@@ -145,6 +148,7 @@ studioMap = {
     "pvgirls": "Porn Valley Girls",
     "realagent.xxx":"Real Agent",
     "realpeachez":"Sarah Peachez",
+    "rebeccalordproductions":"Rebecca Lord Productions",
     "rexringoxxx.xxx":"Rex Ringo XXX Productions",
     "sabrinasabrokporn":"Sabrina Sabrok Videos",
     "sallydangeloxxx":"City Girlz",
@@ -170,6 +174,7 @@ studioMap = {
     "womenwhosmoke":"Women Who Smoke",
     "xtcpov":"XTC POV",
     "xtremestudios.studio69swf.live":"Xtreme Studios Media",
+    "xxxotikangelzent": "xXxOTIK ANGELZ",
     "yourgoonspace":"Your Goon Space"
 }
 
@@ -180,6 +185,7 @@ studioMap = {
 fixedPerformerStudio = {
     "amberlilyshow" : ["Amber Lily"],
     "amberspanks" : ["Amber Spanks"],
+    "amirahadaraxxx" : ["Amirah Adara"],
     "anastasiagree" : ["Anastasia Gree"],
     "anisyia.xxx" : ["Anisyia"],
     "arabellesplayground": ["Arabelle Raphael"],
@@ -218,6 +224,7 @@ fixedPerformerStudio = {
     "natashanice": ["Natasha Nice"],
     "naughty-lada": ["Naughty Lada"],
     "niarossxxx": ["Nia Ross"],
+    "nikkojordan": ["Nikko Jordan"],
     "officialelizabethmarxs":["Elizabeth Marxs"],
     "psychohenessy": ["Alina Henessy"],
     "puremolly": ["Molly Pills"],
@@ -242,6 +249,7 @@ fixedPerformerStudio = {
 # Use the site name as it shows up in the URL.  Where the TLD is not .com, include the TLD (eg, .xxx)
 
 defaultStudioTags= {
+    "amirahadaraxxx": ["Brown Hair (Female)", "Hungarian", "Natural Tits", "Small Tits", "White Woman"],
     "anastasiagree": ["BBW","Brown Hair (Female)","Solo Female","White Woman"],
     "anisyia.xxx": ["Fake Tits","Brown Hair (Female)","Long Hair","White Woman"],
     "arabellesplayground": ["Big Tits", "Natural Tits", "White Woman"],

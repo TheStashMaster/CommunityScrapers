@@ -12,6 +12,14 @@ sceneByQueryFragment:
   action: scrapeXPath
   queryURL: "{url}"
   scraper: sceneScraper
+sceneByFragment:
+  action: scrapeXPath
+  queryURL: https://www.eporner.com/video-{filename}/ # Scrapes data on video so long as the EPORNER video id is in the filename
+  queryURLReplace:
+    filename:
+      - regex: '(.*\[)(\w+)(\]{1}.*)'
+        with: $2
+  scraper: sceneScraper
 
 xPathScrapers:
   sceneSearch:
@@ -46,5 +54,14 @@ xPathScrapers:
         Name: //*[@id="video-info-tags"]/ul/li[@class='vit-uploader']/a/text()
       Image: //meta[@property="og:image"]/@content
       URL: //meta[@property="og:url"]/@content
-
-# Last Updated August 26, 2024
+      
+driver:
+  cookies:
+    - CookieURL: "https://www.eporner.com"
+      Cookies:
+        - Name: "PHPSESSID"
+          Domain: ".eporner.com"
+          # replace with PHPSESSID from logged in browser
+          Value: ""
+          Path: "/"
+# Last Updated June 1, 2025
